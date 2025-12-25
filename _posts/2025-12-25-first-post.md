@@ -1,49 +1,67 @@
 ---
-title: "나의 첫 번째 블로그 포스트"
-excerpt: "Minimal Mistakes 테마를 이용한 첫 글 테스트입니다."
+title: "[Dev] 한국투자증권 KIS Developers Open API 핵심 리소스 정리"
+excerpt: "효율적인 자동매매 프로그램 개발을 위한 한국투자증권 API 필수 링크 가이드"
 categories:
-  - Blog
+  - Finance
 tags:
-  - Test
-  - GitHub
-last_modified_at: 2025-12-25T0:01:00+09:00
+  - KIS
+  - Stock
+  - API
+  - Python
+last_modified_at: 2025-12-25T22:40:00+09:00
 toc: true
 toc_sticky: true
-toc_label: "On this page"
+toc_label: "Quick Links"
 ---
 
-### 안녕하세요!
-이것은 **Minimal Mistakes** 테마를 적용한 제 블로그의 첫 번째 테스트 글입니다.
+## 🏛️ KIS Developers Ecosystem
 
-### 코드 블록 테스트
-이 테마는 코드 하이라이트를 아주 예쁘게 지원합니다.
+한국투자증권의 **Open API**는 국내 및 해외 주식, 파생상품 매매를 위한 강력한 인터페이스를 제공합니다. 성공적인 알고리즘 매매의 첫걸음은 정확한 문서 확인에서 시작됩니다.
 
-```kotlin
-fun main() {
-    println("Hello, GitHub Blog!")
-}
-```
+---
 
-### 2. 글 작성 시 꼭 지켜야 할 설정 (체크리스트)
+### 📘 Official Documentation
+> 최신 명세서와 가이드가 담긴 공식 포털입니다.
 
-#### ① 파일명 형식 (가장 중요)
-* **형식:** `YYYY-MM-DD-제목.md`
-* **예시:** `2025-12-25-my-post.md`
-* 이 형식을 지키지 않으면 깃허브가 글을 인식하지 못해 목록에 나타나지 않습니다.
+* [**KIS Developers 공식 포털**](https://apiportal.koreainvestment.com/) : 메인 페이지 및 공지사항 확인
+* [**API 상세 명세서 (Wiki)**](https://apiportal.koreainvestment.com/help/itp) : 각 기능별 호출 주소 및 파라미터 상세 안내
+* [**모의투자 신청 가이드**](https://apiportal.koreainvestment.com/help/customer-service?id=6) : 실전 매매 전 테스트를 위한 필수 코스
 
-#### ② Front Matter (--- 사이의 설정)
-글 맨 윗부분의 설정값을 통해 디자인을 제어합니다.
-* **`layout: single`**: 기본 글 양식입니다. (생략 가능하지만 명시하면 안전합니다.)
-* **`toc: true`**: 오른쪽 목차를 켭니다.
-* **`toc_sticky: true`**: 스크롤을 내려도 목차가 따라옵니다.
-* **`categories` & `tags`**: 글을 분류할 때 사용합니다. 나중에 카테고리별 보기 기능을 쓸 때 유용합니다.
+---
 
-### 3. 글이 안 보일 때 해결 방법
+### 💻 Developer Resources
+> 개발 속도를 높여주는 라이브러리와 예제 코드 저장소입니다.
 
-글을 올렸는데 `Posts` 페이지나 메인 화면에 나오지 않는다면 다음을 확인하세요.
+| 구분 | 리소스 링크 | 비고 |
+| :--- | :--- | :--- |
+| **Github Repo** | [**KIS 공식 샘플 코드**](https://github.com/koreainvestment/open-api-korea) | Python/Java/C# 예제 제공 |
+| **Python SDK** | [**mohid-kis (Unofficial)**](https://pypi.org/project/mohid-kis/) | 더 간결한 래퍼 라이브러리 |
+| **Community** | [**개발자 포럼 (Q&A)**](https://apiportal.koreainvestment.com/community/forum) | 에러 코드 및 문제 해결 공유 |
 
-1.  **미래 날짜 사용 금지:** 파일명이나 설정의 날짜가 현재 시간보다 미래라면 깃허브는 "예약 발행"으로 간주하고 글을 숨깁니다.
-2.  **`_config.yml`의 `url` 확인:** 주소 설정이 잘못되어 있으면 이미지나 글 링크가 깨질 수 있습니다.
-3.  **빌드 시간 기다리기:** 깃허브 상단 **Actions** 탭에서 노란색 불이 깜빡이고 있다면 아직 서버가 글을 만드는 중입니다. 초록색 체크 표시가 뜰 때까지 약 1분만 기다려 주세요.
+---
 
-***
+### 🛠️ Essential Endpoints
+자동 매매 봇 개발 시 가장 빈번하게 참조하게 될 핵심 API 엔드포인트입니다.
+
+#### 1. 인증 및 보안
+* [**접근 토큰(P_AUTH) 발급**](https://apiportal.koreainvestment.com/help/itp?id=1)
+* [**Hashkey 생성**](https://apiportal.koreainvestment.com/help/itp?id=2)
+
+#### 2. 국내 주식 주문
+* [**주식주문(현금)**](https://apiportal.koreainvestment.com/help/itp?id=30)
+* [**주식주문(정정/취소)**](https://apiportal.koreainvestment.com/help/itp?id=32)
+
+#### 3. 시세 및 잔고
+* [**주식 현재가 시세**](https://apiportal.koreainvestment.com/help/itp?id=45)
+* [**주식 잔고 조회**](https://apiportal.koreainvestment.com/help/itp?id=124)
+
+---
+
+### 💡 Development Tips
+1.  **초당 호출 제한(Throttle)**: 실전 API는 초당 호출 횟수 제한이 엄격하므로 `time.sleep()` 또는 비동기 처리가 필수입니다.
+2.  **WebSocket 활성화**: 실시간 시세는 HTTP 호출보다 WebSocket을 통한 수신이 훨씬 효율적입니다.
+3.  **에러 핸들링**: `RT_CD`가 `0`이 아닌 경우의 예외 처리를 꼼꼼하게 설계하세요.
+
+---
+
+> **Note**: 한국투자증권 API는 정기 점검 시간(보통 00:00 ~ 01:00) 동안 접속이 제한될 수 있습니다.
