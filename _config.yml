@@ -111,7 +111,7 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
-# Site Author
+# Site Author 한글:UTF-8
 author:
   name             : "Kai Kim"
   avatar           : "/assets/images/kai.jpg"
