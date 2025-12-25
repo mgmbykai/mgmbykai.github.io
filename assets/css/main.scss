@@ -7,3 +7,34 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* 하단 태그, 카테고리 영역 숨기기 */
+.page__taxonomy {
+  display: none;
+}
+
+/* 하단 업데이트 날짜 숨기기 */
+.page__date {
+  display: none;
+}
+
+/* 공유 버튼 영역 숨기기 */
+.page__share {
+  display: none;
+}
+
+/* 1. 제목 아래 읽기 시간 숨기기 */
+.page__meta {
+  display: none !important;
+}
+
+/* 2. 하단 관련 글(You may also enjoy) 숨기기 */
+.page__related {
+  display: none !important;
+}
+
+/* 3. 혹시 남아있을 수 있는 하단 공유 버튼과 태그 영역 전체 숨기기 */
+.page__footer, .page__share, .page__taxonomy {
+  display: none !important;
+}
+
