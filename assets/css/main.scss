@@ -8,32 +8,32 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-/* ÇÏ´Ü ÅÂ±×, Ä«Å×°í¸® ¿µ¿ª ¼û±â±â */
+/* í•˜ë‹¨ íƒœê·¸, ì¹´í…Œê³ ë¦¬ ì˜ì—­ ìˆ¨ê¸°ê¸° */
 .page__taxonomy {
   display: none;
 }
 
-/* ÇÏ´Ü ¾÷µ¥ÀÌÆ® ³¯Â¥ ¼û±â±â */
+/* í•˜ë‹¨ ì—…ë°ì´íŠ¸ ë‚ ì§œ ìˆ¨ê¸°ê¸° */
 .page__date {
   display: none;
 }
 
-/* °øÀ¯ ¹öÆ° ¿µ¿ª ¼û±â±â */
+/* ê³µìœ  ë²„íŠ¼ ì˜ì—­ ìˆ¨ê¸°ê¸° */
 .page__share {
   display: none;
 }
 
-/* 1. Á¦¸ñ ¾Æ·¡ ÀĞ±â ½Ã°£ ¼û±â±â */
+/* 1. ì œëª© ì•„ë˜ ì½ê¸° ì‹œê°„ ìˆ¨ê¸°ê¸° */
 .page__meta {
   display: none !important;
 }
 
-/* 2. ÇÏ´Ü °ü·Ã ±Û(You may also enjoy) ¼û±â±â */
+/* 2. í•˜ë‹¨ ê´€ë ¨ ê¸€(You may also enjoy) ìˆ¨ê¸°ê¸° */
 .page__related {
   display: none !important;
 }
 
-/* 3. È¤½Ã ³²¾ÆÀÖÀ» ¼ö ÀÖ´Â ÇÏ´Ü °øÀ¯ ¹öÆ°°ú ÅÂ±× ¿µ¿ª ÀüÃ¼ ¼û±â±â */
+/* 3. í˜¹ì‹œ ë‚¨ì•„ìˆì„ ìˆ˜ ìˆëŠ” í•˜ë‹¨ ê³µìœ  ë²„íŠ¼ê³¼ íƒœê·¸ ì˜ì—­ ì „ì²´ ìˆ¨ê¸°ê¸° */
 .page__footer, .page__share, .page__taxonomy {
   display: none !important;
 }
